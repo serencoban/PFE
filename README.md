@@ -1,10 +1,10 @@
-# **Cahier des charges – Application Web de planification d’événements liés aux mariage**
+# **Cahier des charges – Application Web de planification d’événements liés au mariage**
 
 # **1. Contexte général**
 
 En discutant avec ma meilleure amie qui est entrain de penser à son mariage, elle m’a confié avoir beaucoup de difficultés à s’organiser et cette complexité est bien marquée dans sa culture turque mais aussi dans d’autres cultures asiatiques et maghrébines où le mariage ne se limite pas à une seule journée.
 
-Dans son cas, trois événements distincts (kiz isteme (= fiancailles), soirée du henné, mariage)**
+Dans son cas, trois événements distincts (kiz isteme (= fiancailles), soirée du henné, mariage)
 
 Et en y réfléchissant, j’ai réalisé que depuis mon plus jeune âge, mon entourage a toujours rencontré les mêmes difficultés lors de l’organisation de ces événements. C’est donc pour ça que j’aimerai concevoir une app web qui permet de planifier et gérer efficacement ce type d’évenement.
 
@@ -16,54 +16,45 @@ Et en y réfléchissant, j’ai réalisé que depuis mon plus jeune âge, mon en
 ## **👰🏻‍♀️Persona 1 – Ayla la mariée (admin principale)**
 
 **Âge :** 23 ans
+
 **Profil :** Organisée et perfectionniste, elle souhaite garder une vision globale et maîtriser chaque détail de son mariage.
+
 **Objectif :** Centraliser tous les événements et accéder à chaque catégorie pour chaque événement facilement (budget, planning, invités, prestataires) dans un seul outil.
 
 ### **Scénario 1 – Suivre le budget par catégories**
 
-Ayla se connecte à l’application et arrive sur le Dashboard principal.
-Elle y voit une vue synthétique du budget global du mariage :
+Ayla se connecte sur l’application et arrive sur le Dashboard principal.
+Elle y voit une vue synthétique du budget global des événements :
 
-budget total,
+- budget total,
+- montant déjà utilisé,
+- budget restant.
 
-montant déjà engagé,
-
-budget restant.
-
-Un graphique circulaire lui permet de visualiser rapidement la répartition par catégories (salle, restauration, robe, décoration, animation…).
-
+Une barre de progression horizontale lui permet de visualiser rapidement la répartition par catégories (salle, restauration, robe, décoration, animation…).
+Grâce au bouton dropdown, elle peut naviguer entre le budget global et les 3 autres événements séparément.
 En cliquant sur la catégorie « Décoration », Ayla accède à une vue détaillée listant toutes les dépenses associées, avec pour chacune :
 
-le nom,
+- le nom,
+- le montant,
+- le statut (prévu, confirmé, payé),
+- une éventuelle note interne.
 
-le montant,
+Elle remarque que la décoration va bientôt dépasser le budget initial prévu.
+Elle décide alors d’ajouter une nouvelle dépense avant de l'oublier :
 
-le statut (prévu, confirmé, payé),
-
-une éventuelle note interne.
-
-Elle remarque que la décoration dépasse légèrement le budget initial prévu.
-Elle décide alors d’ajouter une nouvelle dépense :
-
-Intitulé : Location florale
-
-Catégorie : Décoration
-
-Montant estimé : 850 €
-
-Statut : Prévu
-
-Note interne : Comparer avec d’autres prestataires avant validation finale.
+- Intitulé : Location florale
+- Catégorie : Décoration
+- Montant estimé : 250 €
+- Statut : Prévu
+- Note interne : Comparer avec d’autres prestataires avant validation finale.
 
 Après validation, la dépense est immédiatement ajoutée à la liste.
 Le dashboard se met à jour en temps réel, recalculant le total utilisé et mettant visuellement en évidence le dépassement de budget pour la catégorie décoration.
 
-Ayla peut ainsi anticiper une réallocation de budget ou une négociation ultérieure.
-
 ### **Scénario 2 – Structurer la planification jusqu’au jour J**
 
-Ayla souhaite maintenant organiser le déroulé complet des événements liés au mariage.
-Depuis le menu principal, elle accède au module Planning / Timeline.
+Ayla souhaite organiser le déroulé complet des événements liés au mariage.
+Depuis la sidebar, elle accède au module Planning.
 
 Elle crée successivement trois événements principaux :
 - Fiançailles
@@ -74,13 +65,15 @@ Pour chacun, elle encode :
 - le lieu (nom + adresse),
 - la date,
 - l’heure de début et de fin.
-- 
-Pour l’événement Mariage, elle va plus loin et découpe la journée en tranches horaires :
+- le budget 
+- le nombre d'invités
+
+Elle peut aller plus loin avec plus de precisions en cliquant sur une des cartes des événements et peut découper la journée en tranches horaires :
 - 14h00 – 15h00 : Cérémonie
 - 15h00 – 16h30 : Photos
 - 17h00 – 19h00 : Réception
 - 19h00 – … : Soirée
-- 
+
 Chaque tranche horaire peut contenir :
 - une description détaillée,
 - un lieu associé,
@@ -116,16 +109,18 @@ Le plan de table final est enregistré et devient visible pour les prestataires 
 ## **🤵🏽‍♂️Persona 2 –  Peter, le futur marié (co-admin)**
 
 **Âge :** 24 ans
+
 **Profil :** Il souhaite savoir clairement ce qu’il doit faire sans se perdre dans les détails.
+
 **Objectif :** Gérer ses tâches, valider les décisions importantes et garder un œil sur le budget.
 
 ### **Scénario 1 – Voir sa liste de tâches**
 
-Peter se connecte à l’application.
+Peter se connecte sur l’application.
 Contrairement à Ayla, il arrive sur une vue simplifiée du dashboard.
 
 Il voit immédiatement :
-- sa liste de tâches personnelles,
+- sa liste de tâches personnelles, (mais aussi ce que Ayla a noté).
 - leur statut (à faire, en cours, terminé).
 
 Par exemple :
@@ -144,7 +139,7 @@ Le système met automatiquement à jour :
 
 Avant de valider un devis pour la location de chaises, Peter consulte le module Budget.
 
-Il filtre par catégorie Décoration / Mobilier et vérifie :
+Il filtre par catégorie Décoration et vérifie :
 
 - le budget prévu,
 - le montant déjà engagé,
@@ -159,7 +154,8 @@ Ayla reçoit automatiquement une notification indiquant que le prestataire a ét
 ## **🧑‍🔧Persona 3 – Prestataire externe (ex : location de chaises)**
 
 **Profil :** Prestataire avec un accès limité à l’application.
-**Objectif :** suivre ce qui le concerne : budget associé, planning, matériel.
+
+**Objectif :** Suivre ce qui le concerne : budget associé, planning, matériel.
 
 ### **Scénario 1 – Consulter le budget lié à sa catégorie**
 
