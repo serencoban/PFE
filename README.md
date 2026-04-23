@@ -2,9 +2,9 @@
 
 # **1. Contexte général**
 
-En discutant avec ma meilleure amie qui est entrain de penser à son mariage, elle m’a confié avoir beaucoup de difficultés à s’organiser et cette complexité est bien marquée dans sa culture turque mais aussi dans d’autres cultures asiatiques et maghrébines où le mariage ne se limite pas à une seule journée.
+En discutant avec ma meilleure amie qui est entrain de penser à son mariage, elle m’a confié avoir beaucoup de difficultés à s’organiser et cette complexité est bien marquée dans sa culture turque mais aussi dans d’autres cultures asiatiques, maghrébines,... où le mariage ne se limite pas à une seule journée. Chacun implique des invités, des prestataires, un budget et un programme propres.
 
-Dans son cas, trois événements distincts (kiz isteme (= fiancailles), soirée du henné, mariage)
+Dans son cas, trois événements distincts (kiz isteme (= fiancailles), soirée du henné, cérémonie du mariage)
 
 Et en y réfléchissant, j’ai réalisé que depuis mon plus jeune âge, mon entourage a toujours rencontré les mêmes difficultés lors de l’organisation de ces événements. C’est donc pour ça que j’aimerai concevoir une app web qui permet de planifier et gérer efficacement ce type d’évenement.
 
@@ -13,7 +13,7 @@ Et en y réfléchissant, j’ai réalisé que depuis mon plus jeune âge, mon en
 
 # **2. Personas et scénarios**
 
-## **👰🏻‍♀️Persona 1 – Ayla la mariée (admin principale)**
+## **👰🏻‍♀️Persona 1.A – Ayla la mariée (admin principale)**
 
 **Âge :** 23 ans
 
@@ -106,7 +106,7 @@ Le plan de table final est enregistré et devient visible pour les prestataires 
 
 ---
 
-## **🤵🏽‍♂️Persona 2 –  Peter, le futur marié (co-admin)**
+## **🤵🏽‍♂️Persona 1.B –  Peter, le futur marié (co-admin)**
 
 **Âge :** 24 ans
 
@@ -116,42 +116,23 @@ Le plan de table final est enregistré et devient visible pour les prestataires 
 
 ### **Scénario 1 – Voir sa liste de tâches**
 
-Peter se connecte sur l’application.
-Contrairement à Ayla, il arrive sur une vue simplifiée du dashboard.
+Peter se connecte et arrive sur le même Dashboard qu'Ayla. Grâce à un filtre « Mes tâches », il peut se concentrer sur ce qui lui est assigné sans être noyé par tous les détails :
+	•	Aller choisir le costume — À faire
+	•	Contacter le DJ — À faire
+	•	Valider le devis des chaises — À faire
 
-Il voit immédiatement :
-- sa liste de tâches personnelles, (mais aussi ce que Ayla a noté).
-- leur statut (à faire, en cours, terminé).
-
-Par exemple :
-- Aller choisir le costume
-- Contacter le DJ
-- Valider le devis des chaises
-
-Il filtre les tâches par statut À faire et commence par « Contacter le DJ ».
-Une fois l’appel effectué, il ouvre la tâche et la marque comme Terminée.
-
-Le système met automatiquement à jour :
-- l’avancement global du projet,
-- le pourcentage de tâches complétées sur le dashboard.
+Il marque « Contacter le DJ » comme Terminée. Le pourcentage d'avancement global se met automatiquement à jour sur le dashboard, visible par Ayla et Peter en temps réel.
 
 ### **Scénario 2 – Vérifier le budget avant validation**
 
-Avant de valider un devis pour la location de chaises, Peter consulte le module Budget.
+Avant de valider la location de chaises, Peter consulte le module Budget. Il filtre par catégorie « Décoration » et vérifie le budget prévu, le montant déjà engagé et le restant disponible.
 
-Il filtre par catégorie Décoration et vérifie :
-
-- le budget prévu,
-- le montant déjà engagé,
-- le montant restant.
-
-Constatant que la dépense reste dans les limites acceptables, il se rend dans le module Prestataires, ouvre la fiche du prestataire concerné et clique sur Valider le devis.
-
-Ayla reçoit automatiquement une notification indiquant que le prestataire a été validé par Peter.
+Constatant que la dépense reste dans les limites, il se rend dans le module Prestataires, ouvre la fiche du loueur et clique sur « Valider le devis ». 
+*A voir : Ayla reçoit une notification automatique indiquant que le devis a été validé par Peter.*
 
 ---
 
-## **🧑‍🔧Persona 3 – Prestataire externe (ex : location de chaises)**
+## **🧑‍🔧Persona 2 – Prestataire externe (ex : location de chaises)**
 
 **Profil :** Prestataire avec un accès limité à l’application.
 
