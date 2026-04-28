@@ -237,6 +237,7 @@ Ces modifications sont enregistrées et visibles par Ayla, qui peut les valider 
 
 - CRUD invité
 - status
+- en ajoutant un invité, on peut en ajouter d'autres pour faire un groupe de famille ( pour pas lister tout les membre de chaque famille)
 
 ---
 
