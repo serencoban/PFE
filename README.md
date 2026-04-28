@@ -272,6 +272,7 @@ Ces modifications sont enregistrées et visibles par Ayla, qui peut les valider 
 - Créer des catégories (déco, fleurs, robe, couleurs…)
 - Ajouter une note à une photo
 - Partage avec prestataires (lecture ou contribution selon rôle)
+- (Proposition de théme prédéfinis grace à une banque d'image gratuite)
 
 ---
 
