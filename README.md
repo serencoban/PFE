@@ -1,172 +1,68 @@
-# **Cahier des charges – Application Web de planification d’événements liés au mariage**
+# **Cahier des charges : Application web de planification d’événements liés aux mariage**
 
-# **1. Contexte général**
+<aside>
+⭐
 
-En discutant avec ma meilleure amie qui est entrain de penser à son mariage, elle m’a confié avoir beaucoup de difficultés à s’organiser et cette complexité est bien marquée dans sa culture turque mais aussi dans d’autres cultures asiatiques, maghrébines,... où le mariage ne se limite pas à une seule journée. Chacun implique des invités, des prestataires, un budget et un programme propres.
+champs lexical :
 
-Dans son cas, trois événements distincts (kiz isteme (= fiancailles), soirée du henné, cérémonie du mariage)
+- kiz isteme (littéralement : demander la fille ) = la famille de l’homme vient chez la famille de la fille pour demander la main de la fille , les fiançailles se font à ce moment là
+- soirée du henné = soirée/fete traditionnel entre filles où on met de l’henné
+- mariage
+- evenements
+- RSPV = réponse d’un invité à une invitation ( si oui ou non vous venez)
+</aside>
 
-Et en y réfléchissant, j’ai réalisé que depuis mon plus jeune âge, mon entourage a toujours rencontré les mêmes difficultés lors de l’organisation de ces événements. C’est donc pour ça que j’aimerai concevoir une app web qui permet de planifier et gérer efficacement ce type d’évenement.
+# **1. Contexte**
+
+En discutant avec ma meilleure amie qui est entrain de penser à son mariage (+ celle de sa cousine l’année d’apres), elle m’a confié avoir beaucoup de difficultés à s’organiser ( un tableau excel pour les invités, pinterest ou tiktok pour les inspi, les prestatires etc etc)et cette complexité est bien marquée dans sa culture turque mais aussi dans d’autres cultures où le mariage ne se limite pas à une seule journée.
+
+Dans son cas, t**rois événements distincts (kiz isteme , soirée du henné, mariage)**
+
+Et en y réfléchissant, j’ai réalisé que depuis mon plus jeune âge, mon entourage a toujours rencontré les mêmes difficultés lors de l’organisation de ces événements. C’est donc pour ca que j’aimerai concevoir une app web qui permet de planifier et gérer efficacement ce type d’évenement comme un journal 
 
 ---
-
 
 # **2. Personas et scénarios**
 
-## **👰🏻‍♀️Persona 1.A – Ayla la mariée (admin principale)**
+### **Persona 1 – Ayla la mariée (admin principale)**
 
-**Âge :** 23 ans
+Ayla arrive sur le dashboard et voit une un resumé de tout :
 
-**Profil :** Organisée et perfectionniste, elle souhaite garder une vision globale et maîtriser chaque détail de son mariage.
+- une carte pour les **jours restant** avant le prochain evenement à venir (date, progress bar)
+- une carte pour tous les **evenements** et les info pour chacune de ses evenements ( date, nb invité, budget actuelle)
+- une carte pour le **budget**, qu’elle peut filtrer par événement afin de voir le budget maximum prévu, les dépenses actuelles et le budget restant
+- une carte pour les **taches**, où elle retrouve ses prochaines tâches, peu importe l’événement auquel elles appartiennent, et peut directement les marquer comme terminées
+- une carte avec un graphique des **invités** confirmé, en attente et refusé
+- une carte indiquant le statut des **prestataires**, afin de voir rapidement lesquels sont confirmés, en attente ou encore à rechercher
 
-**Objectif :** Centraliser tous les événements et accéder à chaque catégorie pour chaque événement facilement (budget, planning, invités, prestataires) dans un seul outil.
+Son **dashboard** lui sert donc un peu de centre de contrôle. Par exemple, en se connectant, Ayla peut voir qu’il reste 42 jours avant sa soirée henné, que 7 invités n’ont toujours pas répondu, qu’un acompte doit être payé au traiteur et qu’elle a trois tâches à terminer cette semaine.
 
-### **Scénario 1 – Suivre le budget par catégories**
+Pour la page **évenements**, Ayla peut créer plusieurs événements et les gérer indépendamment. Pour chaque événement, elle peut définir une date, lieu, budget, nb d’invités, tâches, prestataires et timeline et elle peut donc avoir 80 invités au henné et 150 au mariage sans mélanger les deux listes.
 
-Ayla se connecte sur l’application et arrive sur le Dashboard principal.
-Elle y voit une vue synthétique du budget global des événements :
+Ayla voudrait egalement une page dédié a ses **inspirations** car enregistré des tableaux sur Pinterest ou mettre en favori des Tiktok, elle s’y perd vite. Grace à cette section, elle va pouvoir neutraliser toutes ses inspirations et elle pourrait aussi avoir different moodbaord pour chaque evenements
 
-- budget total,
-- montant déjà utilisé,
-- budget restant.
+En parlant de s’y perdre, elle voudrait aussi neutraliser tout ses **prestataires** pour qu’elle n’ait plus besoin de rechercher dans ses conversations pour se rappeler si elle avait déjà contacté quelqu’un ou non et savoir si c’est ok ou non
 
-Une barre de progression horizontale lui permet de visualiser rapidement la répartition par catégories (salle, restauration, robe, décoration, animation…).
-Grâce au bouton dropdown, elle peut naviguer entre le budget global et les 3 autres événements séparément.
-En cliquant sur la catégorie « Décoration », Ayla accède à une vue détaillée listant toutes les dépenses associées, avec pour chacune :
+Ayla aime beaucoup quand c’est visuel, elle aimerait donc une **timeline** simple et efficace où elle peut preparer facilement le déroulement d’un evenement par tranches d’horaires + cerise sur le gateau, elle trouverait ca fantastique de pouvoir exporter cette timeline en PDF pour pouvoir l’envoyer a ses amies ( dont moi :> ) pour avoir un avis géneral et voir le déroulement qu’elle souhaite avoir et pourquoi pas l’envoyer au prestataire pour voir quand il sera utile.
 
-- le nom,
-- le montant,
-- le statut (prévu, confirmé, payé),
-- une éventuelle note interne.
-
-Elle remarque que la décoration va bientôt dépasser le budget initial prévu.
-Elle décide alors d’ajouter une nouvelle dépense avant de l'oublier :
-
-- Intitulé : Location florale
-- Catégorie : Décoration
-- Montant estimé : 250 €
-- Statut : Prévu
-- Note interne : Comparer avec d’autres prestataires avant validation finale.
-
-Après validation, la dépense est immédiatement ajoutée à la liste.
-Le dashboard se met à jour en temps réel, recalculant le total utilisé et mettant visuellement en évidence le dépassement de budget pour la catégorie décoration.
-
-### **Scénario 2 – Structurer la planification jusqu’au jour J**
-
-Ayla souhaite organiser le déroulé complet des événements liés au mariage.
-Depuis la sidebar, elle accède au module Planning.
-
-Elle crée successivement trois événements principaux :
-- Fiançailles
-- Soirée henné
-- Mariage
-
-Pour chacun, elle encode :
-- le lieu (nom + adresse),
-- la date,
-- l’heure de début et de fin.
-- le budget 
-- le nombre d'invités
-
-Elle peut aller plus loin avec plus de precisions en cliquant sur une des cartes des événements et peut découper la journée en tranches horaires :
-- 14h00 – 15h00 : Cérémonie
-- 15h00 – 16h30 : Photos
-- 17h00 – 19h00 : Réception
-- 19h00 – … : Soirée
-
-Chaque tranche horaire peut contenir :
-- une description détaillée,
-- un lieu associé,
-- les prestataires concernés.
-- L’interface lui permet de visualiser la journée sous forme de timeline verticale, claire et lisible.
-
-Une fois satisfaite, Ayla utilise la fonction Exporter en PDF afin de générer un document récapitulatif qu’elle pourra partager avec sa famille ou ses prestataires.
-
-### **Scénario 3 – Gestion des invités et plan de table**
-
-À mesure que les réponses arrivent, Ayla met à jour la liste des invités.
-Chaque invité possède un statut :
-
-- Confirmé
-- En attente
-- Refusé
-
-Elle peut filtrer la liste selon ces statuts pour suivre facilement l’avancement.
-
-### *Fonctionnalité à voir*
-Une fois la majorité des réponses reçues, Ayla accède au module Plan de table.
-Elle crée plusieurs tables (Table 1, Table 2, Table famille, Table amis…) et y assigne les invités par simple glisser-déposer.
-
-Certaines règles implicites guident son placement :
-
-- placer certaines personnes ensemble,
-- éviter certains mélanges.
-
-Le plan de table final est enregistré et devient visible pour les prestataires concernés, notamment le service de location de chaises et le traiteur.
+chaque événements a ses invités, et dans cette page elle gere si l’invité et a confirmé, en attente ou refusé, et ce qui serait top, c’est un plan interactive ou elle peut positionner des tables et associé des invités à des chaises, juste pour avoir un joli visuel ( a voir, en fonction de la complexité)
 
 ---
 
-## **🤵🏽‍♂️Persona 1.B –  Peter, le futur marié (co-admin)**
+### **Persona 2 – Prestataire externe**
 
-**Âge :** 24 ans
+Le prestataire n’a pas besoin d’avoir acces à toutes les pages, il veut simplement les info qui concernent sa prestation sans devoir rechercher dans des dizaines de messages. 
 
-**Profil :** Il souhaite savoir clairement ce qu’il doit faire sans se perdre dans les détails.
+Le prestaire peut se connecter à son espace grace à l’invitation envoyé par Ayla, il tombe nez à nez sur un dashbaord adapté à son role
 
-**Objectif :** Gérer ses tâches, valider les décisions importantes et garder un œil sur le budget.
+Il peut directement voir :
 
-### **Scénario 1 – Voir sa liste de tâches**
+- le statut de sa prestation
+- les événements auxquels il participe(date, heure, lieu)
+- le montant convenu et le statut du paiement ou de l’acompte
+- la timeline de l’événement afin de savoir à quel moment sa présence est nécessaire
 
-Peter se connecte et arrive sur le même Dashboard qu'Ayla. Grâce à un filtre « Mes tâches », il peut se concentrer sur ce qui lui est assigné sans être noyé par tous les détails :
-	•	Aller choisir le costume — À faire
-	•	Contacter le DJ — À faire
-	•	Valider le devis des chaises — À faire
-
-Il marque « Contacter le DJ » comme Terminée. Le pourcentage d'avancement global se met automatiquement à jour sur le dashboard, visible par Ayla et Peter en temps réel.
-
-### **Scénario 2 – Vérifier le budget avant validation**
-
-Avant de valider la location de chaises, Peter consulte le module Budget. Il filtre par catégorie « Décoration » et vérifie le budget prévu, le montant déjà engagé et le restant disponible.
-
-Constatant que la dépense reste dans les limites, il se rend dans le module Prestataires, ouvre la fiche du loueur et clique sur « Valider le devis ». 
-*A voir : Ayla reçoit une notification automatique indiquant que le devis a été validé par Peter.*
-
----
-
-## **🧑‍🔧Persona 2 – Prestataire externe (ex : location de chaises)**
-
-**Profil :** Prestataire avec un accès limité à l’application.
-
-**Objectif :** Suivre ce qui le concerne : budget associé, planning, matériel.
-
-### **Scénario 1 – Consulter le budget lié à sa catégorie**
-
-La prestataire se connecte avec un compte à droits restreints.
-Elle accède uniquement à la catégorie de budget Décoration / Location matériel.
-
-Elle peut consulter :
-- les montants prévus,
-- les montants validés,
-- l’état de validation des dépenses.
-
-Aucune modification n’est possible sans validation de la mariée.
-
-### **Scénario 2 – Voir le planning et ajouter un rendez-vous**
-
-Depuis le module Planning, la prestataire visualise uniquement les événements où elle intervient.
-
-Elle repère son créneau le jour du mariage et propose un rendez-vous :
-- Livraison des chaises – 10h30
-
-Ce rendez-vous apparaît comme « à valider » dans l’interface d’Ayla, qui peut l’accepter ou le modifier.
-
-### **Scénario 3 – Ajuster sa liste de matériel**
-
-Dans sa section Matériel, la prestataire ajuste les quantités nécessaires :
-
-- Chaises : 120
-- Housses : 120
-
-Ces modifications sont enregistrées et visibles par Ayla, qui peut les valider définitivement si nécessaire.
+Le prestataire peut aussi avoir acces au moodboard si Ayla le souahite pour qu’il voit un peu l’ambiance qu’Ayla attends
 
 ---
 
@@ -179,120 +75,24 @@ Ces modifications sont enregistrées et visibles par Ayla, qui peut les valider 
 - Mise en avant des avantages et fonctionnalités
 - Aperçu du côté admin (mockups / captures / sections résumées)
 
----
+### **Côté admin**
 
-# **4. Côté admin**
-
-## **Auth**
-
-- Création de compte
-- Connexion / Déconnexion
-- Invitation du futur marié (co-admin)
-- Invitation d’un prestataire (accès limité) (pas besoin de créer un compte, joindre avec un code ?)
-- Gestion du profil (nom, email, rôle)
-- Mot de passe oublié (réinitialisation par email)
-
----
-
-## **Dashboard**
-
-- Avancement global du projet
-- Prochaines deadlines (tâches)
-- Budget utilisé / restant **trié par événement et domaine**
-- Prochaines réunions avec prestataires
-- Accès rapide aux sections
-- statistique invité en fonction du status
-
----
-
-## **Tâches**
-
-- CRUD une tâche
-    - titre
-    - description
-    - statut (TODO / IN_PROGRESS / DONE)
-    - date limite
-    - événement associé
-- Vue personnalisée selon les rôles :
-    - **Admin**  : voit et gère tout
-    - **Co-admin** : gère uniquement ses tâches
-    - **Prestataire** : lecture seule des tâches liées à son domaine (optionnel)
-- Filtrage par statut
-- Indicateur de progression (global + par catégorie si souhaité)
-
----
-
-## **Lieux**
-
-- Gestion des lieux pour chaque événement :
-- Champs :
-    - type d’événement
-    - date / heure
-    - nom du lieu
-    - adresse
-
----
-
-## **Liste des invités**
-
-- CRUD invité
-- status
-- en ajoutant un invité, on peut en ajouter d'autres pour faire un groupe de famille ( pour pas lister tout les membre de chaque famille)
-
----
-
-## **Budget**
-
-- Définir un budget total
-- budget par événement
-- Créer des catégories (salle, robe, déco, etc.)
-- Ajouter des dépenses (recommandé)
-    - montant
-    - catégorie
-    - statut (prévu / payé)
-    - prestataire lié (optionnel)
-- Accès prestataire : lecture seule sur sa catégorie
-
----
-
-## **Programme de l’événement**
-
-- Création du programme global (timeline par heure)
-- Ajout d’un élément :
-    - heure début
-    - heure fin
-    - description
-- Modification / suppression d’un élément
-
----
-
-## **Moodboard**
-
-- Importer des photos
-- Créer des catégories (déco, fleurs, robe, couleurs…)
-- Ajouter une note à une photo
-- Partage avec prestataires (lecture ou contribution selon rôle)
-- (Proposition de théme prédéfinis grace à une banque d'image gratuite)
-
----
-
-## **À voir : Plan des tables**
-
-Fonctions proposées :
-
-- créer des tables
-- assigner les invités aux tables
-
----
-
-## **5. Mon planning**
-
-1. Site public
-2. Auth + rôles
-3. Tâches + dashboard
-4. Invités
-5. Budget + catégories + dépenses
-6. Programme + lieux
-7. Moodboard + prestataire + (plan de table)
-
-
+- creation de compte / connexion / invitation d’un prestatire
+- dashboard
+- taches
+    - CRUD une tâche
+        - titre
+        - description
+        - statut (TODO / IN_PROGRESS / DONE)
+        - date limite
+        - événement associé
+    - Acces au prestataire possible
+- liste des invités, RSVP
+- budget
+    - definir un budget total
+    - budget par evenement
+    - créer des catégories (salle, robe, déco, etc.)
+    - acces au prestataire possible
+- timeline
+- moodboard
+- a voir : plan des tables
