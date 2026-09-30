@@ -1,22 +1,21 @@
 # **Cahier des charges : Application web de planification d’événements liés aux mariage**
 
-<aside>
-⭐
 
-champs lexical :
 
-- kiz isteme (littéralement : demander la fille ) = la famille de l’homme vient chez la famille de la fille pour demander la main de la fille , les fiançailles se font à ce moment là
-- soirée du henné = soirée/fete traditionnel entre filles où on met de l’henné
-- mariage
-- evenements
-- RSPV = réponse d’un invité à une invitation ( si oui ou non vous venez)
-</aside>
+> champs lexical :
+>
+> - **Projet de mariage** : espace regroupant l’ensemble des événements et informations liés à l’organisation d’un mariage.
+>- **Événement** : célébration distincte faisant partie d’un projet de mariage, comme les fiançailles, le henné ou le mariage.
+>- **kiz isteme** (littéralement en turc : demander la fille ) = la famille de l’homme vient chez la famille de la fille pour demander la main de la fille , les fiançailles peuvent se faire à ce moment là
+>- **soirée du henné** : soirée/fête traditionnel entre filles où on pose du henné décoratif sur les mains de la future mariée.
+>- **RSVP** : réponse d’un invité indiquant s’il confirme ou non sa présence à un événement.
+
 
 # **1. Contexte**
 
 En discutant avec ma meilleure amie qui est entrain de penser à son mariage (+ celle de sa cousine l’année d’apres), elle m’a confié avoir beaucoup de difficultés à s’organiser ( un tableau excel pour les invités, pinterest ou tiktok pour les inspi, les prestatires etc etc)et cette complexité est bien marquée dans sa culture turque mais aussi dans d’autres cultures où le mariage ne se limite pas à une seule journée.
 
-Dans son cas, t**rois événements distincts (kiz isteme , soirée du henné, mariage)**
+Dans son cas, **trois événements distincts (kiz isteme , soirée du henné, mariage)**
 
 Et en y réfléchissant, j’ai réalisé que depuis mon plus jeune âge, mon entourage a toujours rencontré les mêmes difficultés lors de l’organisation de ces événements. C’est donc pour ca que j’aimerai concevoir une app web qui permet de planifier et gérer efficacement ce type d’évenement comme un journal 
 
@@ -49,20 +48,28 @@ chaque événements a ses invités, et dans cette page elle gere si l’invité 
 
 ---
 
-### **Persona 2 – Prestataire externe**
+### **Persona 2 – Prestataire externe, le photographe**
 
-Le prestataire n’a pas besoin d’avoir acces à toutes les pages, il veut simplement les info qui concernent sa prestation sans devoir rechercher dans des dizaines de messages. 
+Le photographe reçoit un accès limité au projet. (Ayla peut cocher pour chaque prestataire, à quelle vue ils ont accès)
+Il voit uniquement les informations nécessaires à sa prestation ( date - lieu - horaires, le budget specifique au photographe et le moodboard)
 
-Le prestaire peut se connecter à son espace grace à l’invitation envoyé par Ayla, il tombe nez à nez sur un dashbaord adapté à son role
+Depuis sa fiche de prestation, il retrouve également le montant convenu, l'acompte déjà versé et le solde restant. Il peut déposer son devis ou sa facture afin de centraliser les documents liés à sa prestation.
+Si Ayla modifie l'horaire d'un moment important, la timeline partagée est mise à jour afin que le photographe puisse consulter les dernières informations.
 
-Il peut directement voir :
 
-- le statut de sa prestation
-- les événements auxquels il participe(date, heure, lieu)
-- le montant convenu et le statut du paiement ou de l’acompte
-- la timeline de l’événement afin de savoir à quel moment sa présence est nécessaire
+---
+### **Persona 3 – Ayla qui organise le mariage de sa cousine**
 
-Le prestataire peut aussi avoir acces au moodboard si Ayla le souahite pour qu’il voit un peu l’ambiance qu’Ayla attends
+Depuis son profil, Ayla peut créer un nouveau projet pour sa cousine indépendamment de son projet à elle. Elle invite sa cousine pour lui donner quelque taches à faire sans avoir acces à tt l’admin en complet
+
+Ca permet aussi à l’application de ne pas etre limité aux futurs mariés mais qu’une personne de confiance ou un organisateur peut également créer et gérer un mariage pour quelqu'un d'autre.
+
+---
+### **Persona 4 – La cousine d'Ayla qui cède l'admin à Ayla**
+
+Puisque Ayla connait l’application sur les bouts des doigts, sa cousine lui propose de gerer ca en temps qu’admin principale et que elle, elle puisse simplement voir les info auxquelles Ayla lui a donné accès. 
+Donc elle se connecte grace à l’invitation d’Ayla et elle a deja qql taches à faire, elle peut aussi voir le moodbaord et y contribuer, elle peut aussi voir la liste des invité 
+
 
 ---
 
@@ -77,13 +84,13 @@ Le prestataire peut aussi avoir acces au moodboard si Ayla le souahite pour qu�
 
 ### **Côté admin**
 
-- creation de compte / connexion / invitation d’un prestatire
+- creation de compte / connexion / invitation d’un prestataire
 - dashboard
 - taches
     - CRUD une tâche
         - titre
         - description
-        - statut (TODO / IN_PROGRESS / DONE)
+        - statut
         - date limite
         - événement associé
     - Acces au prestataire possible
