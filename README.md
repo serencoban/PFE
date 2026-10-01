@@ -13,11 +13,11 @@
 
 # **1. Contexte**
 
-En discutant avec ma meilleure amie qui est entrain de penser à son mariage (+ celle de sa cousine l’année d’apres), elle m’a confié avoir beaucoup de difficultés à s’organiser ( un tableau excel pour les invités, pinterest ou tiktok pour les inspi, les prestatires etc etc)et cette complexité est bien marquée dans sa culture turque mais aussi dans d’autres cultures où le mariage ne se limite pas à une seule journée.
+En discutant avec ma meilleure amie qui est entrain de penser à son mariage (+ celle de sa cousine l’année d’apres), elle m’a confié avoir beaucoup de difficultés à s’organiser ( un tableau excel pour les invités, pinterest ou tiktok pour les inspi, les prestatires éparpillé sur whatsapp/instagram, etc etc) et cette complexité est bien marquée dans sa culture turque mais aussi dans d’autres cultures où le mariage ne se limite pas à une seule journée.
 
 Dans son cas, **trois événements distincts (kiz isteme , soirée du henné, mariage)**
 
-Et en y réfléchissant, j’ai réalisé que depuis mon plus jeune âge, mon entourage a toujours rencontré les mêmes difficultés lors de l’organisation de ces événements. C’est donc pour ca que j’aimerai concevoir une app web qui permet de planifier et gérer efficacement ce type d’évenement comme un journal 
+Et en y réfléchissant, j’ai réalisé que depuis mon plus jeune âge, mon entourage a toujours rencontré les mêmes difficultés lors de l’organisation de ces événements et ce n'est pas dans leur habitude d'utiliser un planner. C’est donc pour cela que j’aimerai concevoir une app web qui permet de planifier et gérer efficacement plusieurs événements en même temps au même endroits, tous en restant organisé et responsive pour faciliter la navigation le jour-j.
 
 ---
 
