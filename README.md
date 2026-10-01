@@ -86,7 +86,7 @@ Donc elle se connecte grace à l’invitation d’Ayla et elle a deja qql taches
 
 - creation de compte / connexion / invitation d’un prestataire
 - dashboard
-- taches
+- liste des taches
     - CRUD une tâche
         - titre
         - description
@@ -102,4 +102,4 @@ Donc elle se connecte grace à l’invitation d’Ayla et elle a deja qql taches
     - acces au prestataire possible
 - timeline
 - moodboard
-- a voir : plan des tables
+- a voir : plan des tables interactives
